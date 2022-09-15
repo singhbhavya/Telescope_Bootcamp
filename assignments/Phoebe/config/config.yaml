@@ -1,0 +1,7 @@
+#a file with the sample names
+sra_run_table: "../files/sra_tables.tsv"
+#the colume name with SRA accession
+accession: "Accesstion"
+telescope_annot: "../refs/hg38_retro.gtf"
+tmp_dir: "/Users/phoebefei/Desktop/WCM/Master Thesis/Snakemake Bootcamp/"
+fastq_out: "/Users/phoebefei/Desktop/WCM/Master Thesis/Snakemake Bootcamp/Telescope_Bootcamp/assignments/Phoebe/files/"

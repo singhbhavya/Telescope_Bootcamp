@@ -1,0 +1,7 @@
+wildcard_constraints:
+    sample_name = 'SRR[0-9]{6,10}' #SRR Id for SRA fetch
+configfile: 
+    "config/config.yaml"
+include:"scripts/fastq_download.smk"
+include:"scripts/starrule.smk"
+include:"scripts/Telescope_rule.smk"
