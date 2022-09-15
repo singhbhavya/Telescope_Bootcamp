@@ -1,0 +1,7 @@
+name: sra_env
+channels:
+  - bioconda
+  - defaults
+dependencies:
+  - sra-tools=2.8.0=0
+prefix: /Users/phoebefei/opt/anaconda3/envs/sra_env
