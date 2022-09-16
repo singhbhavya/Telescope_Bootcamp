@@ -9,6 +9,7 @@ rule star_index_gdc38_gencode38:
     params:
         sjdbOverhang = 74
         ## what does this mean?
+        ## why 74?
     threads: snakemake.utils.available_cpu_count()
     shell:
         '''
