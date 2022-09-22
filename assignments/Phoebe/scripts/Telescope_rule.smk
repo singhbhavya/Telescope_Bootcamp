@@ -1,15 +1,15 @@
 rule telescope:
     input:
-        aligned_bam: "../res/{sample_name}.aligned.sorted.bam"
+        aligned_bam: "res/{sample_name}.aligned.sorted.bam"
         annot = config['telescope_annot']
     params:
         outdir = "../res/"
     output:
-        "../res/{sample_name}.report.tsv"
+        "res/{sample_name}.report.tsv"
     log:
-        "../res/{sample_name}.telescope.log"
+        "res/{sample_name}.telescope.log"
     conda:
-        "../envs/telescope.yaml"
+        "envs/telescope.yaml"
     shell:
         '''
         ## samtools to extract the bam to sam

@@ -4,8 +4,8 @@ rule fastq_dump:
     input:
         config['sra_run_table']
     output:
-        "../files/{sample_name}_R1.fastq"
-		"../files/{sample_name}_R2.fastq"
+        "files/{sample_name}_R1.fastq"
+		"files/{sample_name}_R2.fastq"
     threads: 8
     params:
         tmpdir = config['tmp_dir']

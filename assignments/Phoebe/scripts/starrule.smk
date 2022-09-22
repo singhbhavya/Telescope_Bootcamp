@@ -7,16 +7,16 @@
 rule star_index:
 	## input filename
 	input: 
-		bams_r1 = "../files/{sample_name}_R1.fastq"
-		bams_r2 = "../files/{sample_name}_R2.fastq"
-		refgtf = "../refs/hg38.gtf"
-		reffa = "../refs/hg38.fa"
+		bams_r1 = "files/{sample_name}_R1.fastq"
+		bams_r2 = "files/{sample_name}_R2.fastq"
+		refgtf = "refs/hg38.gtf"
+		reffa = "refs/hg38.fa"
 	## output filename
 	output:
-		"../res/{sample_name}.aligned.sorted.bam"
-		"../res/{sample_name}.ReadsPerGene.out.tab"
-		"../refs/SAindex"
-		"../refs/SA"
+		"res/{sample_name}.aligned.sorted.bam"
+		"res/{sample_name}.ReadsPerGene.out.tab"
+		"refs/SAindex"
+		"refs/SA"
 	## env file path
 	conda:
 		"../envs/star.yaml"
@@ -24,8 +24,8 @@ rule star_index:
 	threads: 8
 	## local variables
 	params: 
-		dir = "../refs"
-		outdir = "../res"
+		dir = "refs"
+		outdir = "res"
 	## the scripts
 	shell:
 		'''
