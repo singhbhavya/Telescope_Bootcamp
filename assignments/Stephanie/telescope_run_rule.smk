@@ -14,9 +14,18 @@ rule telescope:
     input: 
         aligned_bam = "results/star_alignment/{samid}/{samid}_GDC38.aligned.out.bam",
         annotated_gtf = "databases/annotations/hg38.cytoband.gtf"
+    log: 
     output:
         TE_count = results/telescope/{samid}/{samid}_telescope-TE_counts.tsv,
         stats = results/telescope/{samid}/{samid}_telescope-stats_report.tsv
     params:
         tempdir = ?
+    shell:
+        """
+        telescope assign\
+            --input
+            --log
+            --output
+            --params
+            
         
